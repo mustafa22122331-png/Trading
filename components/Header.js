@@ -1,3 +1,8 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const NAV_ITEMS = [
   { href: "/", label: "الرئيسية" },
   { href: "/curriculum", label: "المنهج" },
