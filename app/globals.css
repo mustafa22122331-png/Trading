@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fraunces: "Fraunces", "IBM Plex Sans Arabic", serif;
+  --font-inter: "IBM Plex Sans Arabic", "Inter", sans-serif;
+  --font-jbmono: "JetBrains Mono", monospace;
+}
+
+* {
+  border-color: #26323E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0F14;
+  color: #EDEFF2;
+  font-family: var(--font-inter);
+  direction: rtl;
+}
+
+::selection {
+  background: #C9A227;
+  color: #0B0F14;
+}
+
+/* شريط تمرير هادئ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F14;
+}
+::-webkit-scrollbar-thumb {
+  background: #26323E;
+  border-radius: 8px;
+}
+
+/* حالة التركيز بالكيبورد */
+:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 2px;
+}
+
+/* خط أفقي رفيع بأسلوب "تذكرة سوق" */
+.hairline {
+  height: 1px;
+  background: linear-gradient(to left, transparent, #26323E 15%, #26323E 85%, transparent);
+}
+
+/* درجة سلم الأسعار: يستخدم في المؤشرات الرقمية للمستويات */
+.tick-label {
+  font-family: var(--font-jbmono);
+  letter-spacing: 0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
