@@ -41,7 +41,7 @@ export async function POST(req) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
         "HTTP-Referer": process.env.SITE_URL || "http://localhost:3000",
-        "X-Title": "أكاديمية الفهم - ICT/SMC",
+        "X-Title": "Trading Academy - ICT/SMC",
       },
       body: JSON.stringify({
         model,
