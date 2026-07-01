@@ -7,3 +7,4 @@ const NAV_ITEMS = [
   { href: "/calculator", label: "حاسبة الحجم" },
   { href: "/mentor", label: "المرشد الذكي" },
 ];
+ 

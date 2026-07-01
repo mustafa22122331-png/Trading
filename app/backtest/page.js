@@ -1,16 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import dynamic from "next/dynamic";
-
-const BacktestChart = dynamic(() => import("@/components/BacktestChart"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-[480px] rounded-xl border border-base-line bg-base-surface flex items-center justify-center text-ink-muted text-sm">
-      جاري تجهيز الشارت…
-    </div>
-  ),
-});
+import BacktestChart from "@/components/BacktestChart";
 
 export default function BacktestPage() {
   const [score, setScore] = useState({ correct: 0, total: 0 });
